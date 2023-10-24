@@ -25,5 +25,8 @@ void Start(){
         if(theCollision.gameObject.tag == "Respawn"){
             repos = theCollision.gameObject.transform.position;
         }
+        if(theCollision.gameObject.tag == "death"){
+            transform.position = repos;
+        }
     }
 }
