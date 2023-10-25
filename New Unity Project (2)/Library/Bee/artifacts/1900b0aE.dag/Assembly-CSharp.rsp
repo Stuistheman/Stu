@@ -335,6 +335,7 @@
 "Assets/CamSwitch.cs"
 "Assets/ColorChange.cs"
 "Assets/deathM.cs"
+"Assets/LevelSelection.cs"
 "Assets/MovingPlatform.cs"
 "Assets/PlatformDetection.cs"
 "Assets/PlayerMovement.cs"
