@@ -3,6 +3,7 @@ using System.Threading;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -19,13 +20,14 @@ public class PlayerMovement : MonoBehaviour
     private bool pauseStat = false;
     public GameObject powerUpText; 
     
+    
 
     private float dashCool = 1f;
     public float dashCoolCurrent = 0.0f;
-    public bool dashReady = false;
+    public bool dashReady = true;
 
 
-    private bool dashUnlock; 
+    public bool dashUnlock = false; 
     public Slider dashSlider;
 
     // Start is called before the first frame update
@@ -33,7 +35,6 @@ public class PlayerMovement : MonoBehaviour
     {
         cubeRenderer = cube.GetComponent<Renderer>();
         Dashtrail.SetActive(false);
-        dashUnlock = false;
         sprintUn = false; 
         pause.SetActive(false);
         
@@ -42,6 +43,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         
 
 		 float translation = Input.GetAxis("Vertical") * speed;

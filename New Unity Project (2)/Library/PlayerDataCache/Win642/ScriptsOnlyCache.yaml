@@ -4,6 +4,8 @@ ScriptsOnlyBuild:
     - CamSwitch
     - CameraFollow
     - ColorChange
+    - LevelProgression
+    - LevelSelection
     - MovingPlatform
     - NewBehaviourScript
     - PlayerMovement
@@ -43,7 +45,22 @@ ScriptsOnlyBuild:
     - UnityEngine.UIElements.StyleSheets.Dimension
     - UnityEngine.UIElements.StyleSheets.ScalableImage
     - UnityEngine.UIElements.StyleValueHandle
-  methodsToPreserve: []
+  methodsToPreserve:
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: Assembly-CSharp
+    fullTypeName: LevelSelection
+    methodName: OpenLevel
+  - assembly: Assembly-CSharp
+    fullTypeName: LevelSelection
+    methodName: OpenLevel
+  - assembly: Assembly-CSharp
+    fullTypeName: LevelSelection
+    methodName: OpenLevel
   sceneClasses:
     Assets/Level1.unity:
     - Class: 1
@@ -87,37 +104,128 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 624}
     - Class: 114
-      Script: {instanceID: 1550}
+      Script: {instanceID: 1552}
     - Class: 114
-      Script: {instanceID: 1566}
+      Script: {instanceID: 1568}
     - Class: 114
-      Script: {instanceID: 1592}
+      Script: {instanceID: 1594}
     - Class: 114
-      Script: {instanceID: 1690}
+      Script: {instanceID: 1692}
     - Class: 114
-      Script: {instanceID: 1706}
+      Script: {instanceID: 1702}
     - Class: 114
-      Script: {instanceID: 1712}
+      Script: {instanceID: 1708}
     - Class: 114
-      Script: {instanceID: 1726}
+      Script: {instanceID: 1714}
     - Class: 114
-      Script: {instanceID: 1734}
+      Script: {instanceID: 1730}
     - Class: 114
-      Script: {instanceID: 1750}
+      Script: {instanceID: 1738}
     - Class: 114
-      Script: {instanceID: 1756}
+      Script: {instanceID: 1754}
     - Class: 114
-      Script: {instanceID: 1794}
+      Script: {instanceID: 1760}
     - Class: 114
-      Script: {instanceID: 1830}
+      Script: {instanceID: 1798}
     - Class: 114
-      Script: {instanceID: 1886}
+      Script: {instanceID: 1834}
     - Class: 114
-      Script: {instanceID: 1922}
+      Script: {instanceID: 1890}
     - Class: 114
-      Script: {instanceID: 1940}
+      Script: {instanceID: 1926}
     - Class: 114
-      Script: {instanceID: 1956}
+      Script: {instanceID: 1944}
+    - Class: 114
+      Script: {instanceID: 1960}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 198
+      Script: {instanceID: 0}
+    - Class: 199
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
+    - Class: 258
+      Script: {instanceID: 0}
+    - Class: 1818360610
+      Script: {instanceID: 0}
+    Assets/Level2.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 23
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 33
+      Script: {instanceID: 0}
+    - Class: 43
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 54
+      Script: {instanceID: 0}
+    - Class: 64
+      Script: {instanceID: 0}
+    - Class: 65
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 89
+      Script: {instanceID: 0}
+    - Class: 96
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 108
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 1552}
+    - Class: 114
+      Script: {instanceID: 1594}
+    - Class: 114
+      Script: {instanceID: 1692}
+    - Class: 114
+      Script: {instanceID: 1708}
+    - Class: 114
+      Script: {instanceID: 1714}
+    - Class: 114
+      Script: {instanceID: 1730}
+    - Class: 114
+      Script: {instanceID: 1738}
+    - Class: 114
+      Script: {instanceID: 1754}
+    - Class: 114
+      Script: {instanceID: 1760}
+    - Class: 114
+      Script: {instanceID: 1798}
+    - Class: 114
+      Script: {instanceID: 1834}
+    - Class: 114
+      Script: {instanceID: 1890}
+    - Class: 114
+      Script: {instanceID: 1926}
+    - Class: 114
+      Script: {instanceID: 1944}
+    - Class: 114
+      Script: {instanceID: 1960}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -149,9 +257,17 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 21
       Script: {instanceID: 0}
+    - Class: 23
+      Script: {instanceID: 0}
     - Class: 28
       Script: {instanceID: 0}
+    - Class: 33
+      Script: {instanceID: 0}
+    - Class: 43
+      Script: {instanceID: 0}
     - Class: 48
+      Script: {instanceID: 0}
+    - Class: 65
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
@@ -159,11 +275,39 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
-    - Class: 108
+    - Class: 114
+      Script: {instanceID: 1534}
+    - Class: 114
+      Script: {instanceID: 1552}
+    - Class: 114
+      Script: {instanceID: 1594}
+    - Class: 114
+      Script: {instanceID: 1714}
+    - Class: 114
+      Script: {instanceID: 1730}
+    - Class: 114
+      Script: {instanceID: 1738}
+    - Class: 114
+      Script: {instanceID: 1834}
+    - Class: 114
+      Script: {instanceID: 1944}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
     - Class: 196
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
+    - Class: 258
       Script: {instanceID: 0}
   scriptHashData:
   - hash:
@@ -178,6 +322,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.UI
     className: ScrollRect
+  - hash:
+      serializedVersion: 2
+      Hash: 751e5bae2a317288c2ab58d66687092b
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: LevelSelection
   - hash:
       serializedVersion: 2
       Hash: be8b55fc8a992741c6269f20cbc719b1
@@ -264,7 +414,13 @@ ScriptsOnlyBuild:
     className: TextPopUpButton
   - hash:
       serializedVersion: 2
-      Hash: ad87b709fe87113ab6fd1aa2a5254500
+      Hash: 751e5bae2a317288c2ab58d66687092b
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: LevelProgression
+  - hash:
+      serializedVersion: 2
+      Hash: 95ffc52265675934f9865af01e09d37c
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: PlayerMovement
@@ -426,6 +582,7 @@ ScriptsOnlyBuild:
     className: CameraFollow
   platform: 19
   scenePathNames:
-  - Assets/Level1.unity
   - Assets/LevelSelect.unity
+  - Assets/Level1.unity
+  - Assets/Level2.unity
   playerPath: C:/Users/s290526/Downloads/New Unity Project (2).exe

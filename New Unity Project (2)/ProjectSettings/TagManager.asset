@@ -10,6 +10,8 @@ TagManager:
   - SprintPower
   - MovingPlatform
   - death
+  - true
+  - trail
   layers:
   - Default
   - TransparentFX
