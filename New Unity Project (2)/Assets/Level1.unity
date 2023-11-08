@@ -11266,7 +11266,7 @@ GameObject:
   - component: {fileID: 1566529805}
   m_Layer: 0
   m_Name: Particle System 2
-  m_TagString: Untagged
+  m_TagString: trail
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31242,8 +31242,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1934629708}
   - component: {fileID: 1934629707}
-  - component: {fileID: 1934629714}
-  - component: {fileID: 1934629713}
+  - component: {fileID: 1934629716}
+  - component: {fileID: 1934629715}
   - component: {fileID: 1934629711}
   - component: {fileID: 1934629709}
   m_Layer: 0
@@ -31305,12 +31305,12 @@ Transform:
   m_GameObject: {fileID: 1934629704}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.1582209, y: 2.15, z: -14.49}
+  m_LocalPosition: {x: 1.1582209, y: 2.5500002, z: -13.49}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: -5, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1934629709
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31339,10 +31339,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44d70cc20219cd84593f67d248eafe36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Offset: {x: 0, y: 3, z: 0}
+  Offset: {x: 0, y: 4, z: 0}
   ApplyAfter: 1
   PreserveComposition: 0
---- !u!114 &1934629713
+--- !u!114 &1934629715
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -31354,8 +31354,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4c41ac9245b87c4192012080077d830, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Damping: 0
---- !u!114 &1934629714
+  Damping: 10
+--- !u!114 &1934629716
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -31367,11 +31367,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 625c14eee3ad46c99df7c7c891ef668a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Damping: {x: 0.1, y: 0.5, z: 0.3}
-  ShoulderOffset: {x: 0, y: -0.4, z: -10}
+  Damping: {x: 0, y: 0, z: 0}
+  ShoulderOffset: {x: 0, y: 0, z: -10}
   VerticalArmLength: 0.4
-  CameraSide: 1
-  CameraDistance: 2
+  CameraSide: 0
+  CameraDistance: 1
   AvoidObstacles:
     Enabled: 1
     CollisionFilter:
@@ -32311,11 +32311,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2366432303386452005, guid: 9e31ba2f306c23446a499d5c6e55743b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.15
+      value: 6.55
       objectReference: {fileID: 0}
     - target: {fileID: 2366432303386452005, guid: 9e31ba2f306c23446a499d5c6e55743b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -14.49
+      value: -13.49
       objectReference: {fileID: 0}
     - target: {fileID: 2366432303386452005, guid: 9e31ba2f306c23446a499d5c6e55743b, type: 3}
       propertyPath: m_LocalRotation.w
