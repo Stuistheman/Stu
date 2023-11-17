@@ -19,6 +19,7 @@ public class PlayerMovement : MonoBehaviour
     public GameObject pause; 
     private bool pauseStat = false;
     public GameObject powerUpText; 
+    public GameObject jumpSpark;
     
     
 
@@ -48,6 +49,8 @@ public class PlayerMovement : MonoBehaviour
 
 		 float translation = Input.GetAxis("Vertical") * speed;
         float rotation = Input.GetAxis("Horizontal") * rotationSpeed;
+        jumpSpark.transform.position = cube.transform.position;
+        jumpSpark.transform.rotation =  (cube.transform.rotation);
          
 
         // Make it move 10 meters per second instead of 10 meters per frame...
