@@ -20,7 +20,10 @@ public class PlayerMovement : MonoBehaviour
     private bool pauseStat = false;
     public GameObject powerUpText; 
     public GameObject jumpSpark;
-    
+    public float Jumpforce = 100.0f;
+    private Rigidbody rb = null;
+    public float Fallmultipler = 2.0f;
+
     
 
     private float dashCool = 1f;
@@ -38,6 +41,7 @@ public class PlayerMovement : MonoBehaviour
         Dashtrail.SetActive(false);
         sprintUn = false; 
         pause.SetActive(false);
+        rb = this.GetComponent<Rigidbody>();
         
     }
 
@@ -63,8 +67,9 @@ public class PlayerMovement : MonoBehaviour
         // Rotate around our y-axis
         transform.Rotate(0, rotation, 0);
 if(Input.GetButtonDown("Jump") && isgrounded == true){
-		GetComponent<Rigidbody>().velocity = new Vector3(0, 10, 0);
-        cube.transform.Rotate(0, 0, 360, Space.World);
+		//GetComponent<Rigidbody>().velocity = new Vector3(0, 10, 0);
+        //cube.transform.Rotate(0, 0, 360, Space.World);
+        rb.AddForce(Vector3.up * Jumpforce, ForceMode.VelocityChange);
         isgrounded= false;
 
 	}
@@ -108,6 +113,12 @@ if(Input.GetButtonDown("Jump") && isgrounded == true){
 
 
 
+}
+
+private void FixedUpdate(){
+    if(rb.velocity.y < 0){
+        rb.velocity += Vector3.up * Physics.gravity.y * Fallmultipler * Time.deltaTime;
+    }
 }
 void PauseToggle(GameObject pause){
     if(Time.timeScale > 0){
