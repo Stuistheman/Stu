@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
-	public float speed = 10.0f;
+	public float speed = 15.0f;
     public float rotationSpeed = 200.0f;
 	public bool isgrounded = true;
     public GameObject Sprinttrail; 
@@ -23,7 +23,7 @@ public class PlayerMovement : MonoBehaviour
     public float Jumpforce = 100.0f;
     private Rigidbody rb = null;
     public float Fallmultipler = 2.0f;
-
+    public float speedOG;
     
 
     private float dashCool = 1f;
@@ -42,6 +42,7 @@ public class PlayerMovement : MonoBehaviour
         sprintUn = false; 
         pause.SetActive(false);
         rb = this.GetComponent<Rigidbody>();
+        speedOG = speed;
         
     }
 
@@ -79,7 +80,7 @@ if(Input.GetButtonDown("Jump") && isgrounded == true){
 
     }
     else{
-        speed = 10.0f;
+        speed = speedOG;
         Sprinttrail.SetActive(false);
     }
 
