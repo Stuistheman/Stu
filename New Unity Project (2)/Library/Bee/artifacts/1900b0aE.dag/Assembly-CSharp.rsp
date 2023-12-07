@@ -355,6 +355,7 @@
 "Assets/CameraFollow.cs"
 "Assets/CamSwitch.cs"
 "Assets/ColorChange.cs"
+"Assets/ColorTransition.cs"
 "Assets/deathM.cs"
 "Assets/LevelProgression.cs"
 "Assets/LevelSelection.cs"

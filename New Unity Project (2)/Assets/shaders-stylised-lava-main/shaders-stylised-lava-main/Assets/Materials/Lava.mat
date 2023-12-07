@@ -39,6 +39,7 @@ Material:
     m_Floats:
     - _Angle_Change_Speed: 0.2
     - _Angle_Offset: 15
+    - _BUILTIN_QueueControl: 0
     - _Flow_Speed: 0.00001
     - _Flow_Strength: 0.005
     - _Heightmap_Strength: 4.5

@@ -13,6 +13,7 @@ public class PlayerMovement : MonoBehaviour
     public GameObject Sprinttrail; 
     public GameObject Dashtrail; 
     public GameObject cube;
+    public Material rgb;
     private Renderer cubeRenderer;
    private Color newCubeColor;
     public bool sprintUn;
@@ -135,7 +136,7 @@ else if(Time.timeScale == 0){
 
 
 void OnCollisionEnter(Collision theCollision){
-    if(theCollision.gameObject.tag == "floor" || theCollision.gameObject.tag == "MovingPlatform"){
+    if(theCollision.gameObject.tag == "floor" || theCollision.gameObject.tag == "MovingPlatform" || theCollision.gameObject.tag == "Respawn"){
         isgrounded = true;
     }
     else
@@ -165,8 +166,8 @@ IEnumerator CooldownCoroutine(float cd){
     yield return new WaitForSeconds(cd);
     dashReady = true;
     Dashtrail.SetActive(false);
-      newCubeColor = new Color(1f, 0.25f, 0.25f);
-            cubeRenderer.material.SetColor("_Color", newCubeColor);
+      ///newCubeColor = new Color(1f, 0.25f, 0.25f);
+    cubeRenderer.material = rgb;
     dashSlider.value = 0;
     
 }

@@ -5805,7 +5805,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!199 &167199371
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -15995,6 +15995,27 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1465418748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1465418734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54136f54fe14efb47ba1fbd7e0c541ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  material: {fileID: 2100000, guid: 514d254b2e67939478ada59aa9b189ae, type: 2}
+  colors:
+  - {r: 1, g: 0, b: 0, a: 0}
+  - {r: 1, g: 0.45411828, b: 0, a: 0}
+  - {r: 1, g: 0.92539847, b: 0, a: 0}
+  - {r: 0.33910358, g: 1, b: 0, a: 0}
+  - {r: 0, g: 0.22227144, b: 1, a: 0}
+  - {r: 0.76933575, g: 0, b: 1, a: 0}
+  time: 1
 --- !u!1 &1466581437
 GameObject:
   m_ObjectHideFlags: 0
@@ -32276,6 +32297,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 3762544396374105876, guid: f3864f3ea8d79354495f0b2ce8dc335a, type: 3}
+      propertyPath: rgb
+      value: 
+      objectReference: {fileID: 2100000, guid: 514d254b2e67939478ada59aa9b189ae, type: 2}
+    - target: {fileID: 3762544396374105876, guid: f3864f3ea8d79354495f0b2ce8dc335a, type: 3}
       propertyPath: cube
       value: 
       objectReference: {fileID: 1465418734}
@@ -32285,7 +32310,7 @@ PrefabInstance:
       objectReference: {fileID: 1204494445}
     - target: {fileID: 3762544396374105876, guid: f3864f3ea8d79354495f0b2ce8dc335a, type: 3}
       propertyPath: speed
-      value: 15
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 3762544396374105876, guid: f3864f3ea8d79354495f0b2ce8dc335a, type: 3}
       propertyPath: trail
@@ -32367,6 +32392,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7756641371976592065, guid: f3864f3ea8d79354495f0b2ce8dc335a, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 514d254b2e67939478ada59aa9b189ae, type: 2}
     - target: {fileID: 8269981994806669019, guid: f3864f3ea8d79354495f0b2ce8dc335a, type: 3}
       propertyPath: m_Name
       value: Cube
@@ -32392,6 +32421,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8269981994806669019, guid: f3864f3ea8d79354495f0b2ce8dc335a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1465418742}
+    - targetCorrespondingSourceObject: {fileID: 8269981994806669019, guid: f3864f3ea8d79354495f0b2ce8dc335a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1465418748}
   m_SourcePrefab: {fileID: 100100000, guid: f3864f3ea8d79354495f0b2ce8dc335a, type: 3}
 --- !u!1001 &3467471722866247578
 PrefabInstance:
