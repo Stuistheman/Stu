@@ -20,6 +20,7 @@ public class PlayerMovement : MonoBehaviour
     public GameObject pause; 
     private bool pauseStat = false;
     public GameObject powerUpText; 
+    public GameObject powerUpText2; 
     public GameObject jumpSpark;
     public float Jumpforce = 100.0f;
     private Rigidbody rb = null;
@@ -152,8 +153,10 @@ void OnCollisionEnter(Collision theCollision){
         Time.timeScale = 0;
         dashReady = true;
     }
-    if(theCollision.gameObject.tag == "SprintPower"){
+    if(theCollision.gameObject.tag == "SprintPower" && sprintUn == false){
         sprintUn = true;
+        powerUpText2.SetActive(true);
+        Time.timeScale = 0;
     }
 }
 public void CooldownStart(){

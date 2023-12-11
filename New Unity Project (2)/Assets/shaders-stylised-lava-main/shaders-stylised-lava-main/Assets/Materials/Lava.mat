@@ -40,15 +40,15 @@ Material:
     - _Angle_Change_Speed: 0.2
     - _Angle_Offset: 15
     - _BUILTIN_QueueControl: 0
-    - _Flow_Speed: 0.00001
-    - _Flow_Strength: 0.005
-    - _Heightmap_Strength: 4.5
+    - _Flow_Speed: 0.01
+    - _Flow_Strength: 0.001
+    - _Heightmap_Strength: 5
     - _Island_Density: 100
     - _Thickness: 0.05
     - _Thickness_Falloff: 0.07
     m_Colors:
     - _Lava_Color: {r: 8.47419, g: 2.7264967, b: 0, a: 1}
-    - _Lava_Speed: {r: 0.0001, g: 0.001, b: 0, a: 0}
+    - _Lava_Speed: {r: 0.01, g: 0.01, b: 0, a: 0}
     - _Rock_Color: {r: 0.5764706, g: 0.28235295, b: 0.08235294, a: 1}
   m_BuildTextureStacks: []
 --- !u!114 &2668463853469986571
