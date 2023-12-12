@@ -26,6 +26,7 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody rb = null;
     public float Fallmultipler = 2.0f;
     public float speedOG;
+    public GameObject cubeForColor;
     
 
     private float dashCool = 1f;
@@ -39,7 +40,7 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        cubeRenderer = cube.GetComponent<Renderer>();
+        cubeRenderer = cubeForColor.GetComponent<Renderer>();
         Dashtrail.SetActive(false);
         sprintUn = false; 
         pause.SetActive(false);
@@ -99,7 +100,7 @@ if(Input.GetButtonDown("Jump") && isgrounded == true){
 
             CooldownStart();
 
-        cube.transform.Translate(translation,0,10);
+        rb.transform.Translate(translation,0,10);
         
         }
         }

@@ -385,6 +385,14 @@ namespace UnityEditor.ShaderGraph
         internal delegate void SaveGraphDelegate(Shader shader, object context);
         internal static SaveGraphDelegate onSaveGraph;
 
+        #region SubData
+
+        [SerializeField]
+        internal List<JsonData<AbstractShaderGraphDataExtension>> m_SubDatas = new List<JsonData<AbstractShaderGraphDataExtension>>();
+        public DataValueEnumerable<AbstractShaderGraphDataExtension> SubDatas => m_SubDatas.SelectValue();
+
+        #endregion
+
         #region Targets
 
         // Serialized list of user-selected active targets, sorted in displayName order (to maintain deterministic serialization order)
@@ -549,8 +557,8 @@ namespace UnityEditor.ShaderGraph
         }
 
         // TODO: Need a better way to handle this
-#if VFX_GRAPH_10_0_0_OR_NEWER
         public bool hasVFXCompatibleTarget => activeTargets.Any(o => o.SupportsVFX());
+#if VFX_GRAPH_10_0_0_OR_NEWER
         public bool hasVFXTarget
         {
             get
