@@ -18,7 +18,7 @@ public class CubeFollwer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.)
+        
         Repos = CubeToFollow.transform.position;
         ReposR = CubeToFollow.transform.rotation;
         transform.position = Repos;
